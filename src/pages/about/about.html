@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      PLACES<ion-icon class="info" name="information-circle" (click)="presentToast()"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-card>
+	<div id="localmap"></div>
+  <ion-item (click)="updateMap(12.6269,80.192711,'Mahabalipuram')">
+    <ion-icon name="images" item-start large></ion-icon>
+    <h2>Mahabalipuram</h2>
+    <p>Tamil Nadu 603104</p>
+  </ion-item>
+  <ion-item (click)="updateMap(12.9923,80.2170,'Phoenix Marketcity')">
+    <ion-icon name="cart" item-left large ></ion-icon>
+    <h2>Phoenix Marketcity </h2>
+    <p>142, Velachery Main Road,Velachery, Chennai, TN 600042</p>
+  </ion-item>
+  <ion-item (click)="updateMap(12.9941,80.1709,'Chennai International Airport')">
+    <ion-icon name="jet" item-left large ></ion-icon>
+    <h2>Chennai International Airport </h2>
+    <p>GST Rd, Meenambakkam, Chennai, TN 600027</p>
+  </ion-item>
+  <ion-item (click)="updateMap(13.0106,80.2207,'ITC Grand Chola Hotel')">
+    <ion-icon name="wine" item-left large ></ion-icon>
+    <h2>ITC Grand Chola Hotel</h2>
+    <p>63, Mount Rd, Guindy Institutional Area, Little Mount, Guindy, Chennai, TN 600032</p>
+  </ion-item>
+</ion-card>
+</ion-content>

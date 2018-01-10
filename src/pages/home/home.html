@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>CLIENT VISIT</ion-title>
+  </ion-navbar>
+  <img class="hasbro" [ngClass]="{'logoActive':changeFlag}" src="assets/imgs/beam.png">
+  <img class="tata" src="assets/imgs/tata.png">
+</ion-header>
+
+<ion-content>
+  <ion-slides #Slides direction="vertical" (ionSlideDidChange)="onSlideChange($event)">
+    <ion-slide>
+      <div class="ofc">
+        <img src="assets/imgs/ofc.jpg">
+        <img class="tataLog" src="assets/imgs/tataLog.png">
+        <h3>Welcomes You!</h3>
+        <ion-icon class="swipe" name="arrow-dropdown-circle" (click)="nextSlide()"></ion-icon>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="time">
+        <ion-segment [(ngModel)]="timeLine">
+        <ion-segment-button value="day1">Day 1</ion-segment-button>
+        <ion-segment-button value="day2">Day 2</ion-segment-button>
+        <ion-segment-button value="day3">Day 3</ion-segment-button>
+        </ion-segment>
+      </div>
+      <div [ngSwitch]="timeLine">
+        <ion-list *ngSwitchCase="'day1'">
+          <table>
+            <tr><th class="date">From</th><th class="date">To</th><th>Event</th><th>Presenter</th></tr>
+            <tr><td>10:30 AM</td><td>11.00 AM</td><td>Team Introduction</td><td>Offshore team</td></tr>
+            <tr class="break"><td>11:00 AM</td><td>11:15 AM</td><td>Coffee and Bio break</td><td></td></tr>
+            <tr><td>11:15 AM</td><td>12:00 PM</td><td>Discussion on BSI, Blend and BeamSuntory.com development</td><td>Kalyani , Sabrish, Jos Anto</td></tr>
+            <tr class="break"><td>12:00 PM</td><td>12:45 PM</td><td>Lunch</td><td></td></tr>
+            <tr><td>12:45 PM</td><td>1:30 PM</td><td>Siruseri Campus Visit</td><td>CVMS team / Admin</td></tr>
+            <tr><td>1:30 PM</td><td>2:00 PM</td><td>Hasbro ODC floor walk through</td><td>Chandra</td></tr>
+            <tr><td>2:00 PM</td><td>3:00 PM</td><td>Detailing on Drupal activities carried  out @ Hasbro</td><td>Krishna</td></tr>
+            <tr class="break"><td>3:00 PM</td><td>3:15 PM</td><td>Coffee and Bio break</td><td></td></tr>
+            <tr><td>3:15 PM</td><td>4:15 PM</td><td>Discussion with Manage Service team </td><td>Manage Service team</td></tr>
+            <tr><td>4:15 PM</td><td>4:30 PM</td><td>Wrap up</td><td>Subbu and Kalyani</td></tr>
+          </table>
+        </ion-list>
+        <ion-list *ngSwitchCase="'day2'">
+          <table>
+            <tr><th class="date">From</th><th class="date">To</th><th>Event</th><th>Presenter</th></tr>
+            <tr><td>10:00 AM</td><td>11.00 AM</td><td>TCS Digital Capabilities</td><td>Digital COE</td></tr>
+            <tr class="break"><td>11:00 AM</td><td>11:15 AM</td><td>Coffee and Bio break</td><td></td></tr>
+            <tr><td>11:15 AM</td><td>12:00 PM</td><td>TCS Engagements in Digital Marketing</td><td>Riddhi</td></tr>
+            <tr class="break"><td>12:00 PM</td><td>12:45 PM</td><td>Lunch</td><td></td></tr>
+            <tr><td>12:45 PM</td><td>1:30 PM</td><td>Mobile COE</td><td>Chandra and DI team</td></tr>
+            <tr><td>1:30 PM</td><td>2:15 PM</td><td>Digital COE Lab visit</td><td>Chandra</td></tr>
+            <tr><td>2:15 PM</td><td>3:00 PM</td><td>QA COE Lab visit</td><td>Chandra</td></tr>
+            <tr class="break"><td>3:00 PM</td><td>3:15 PM</td><td>Coffee and Bio break</td><td></td><td></td></tr>
+            <tr><td>3:15 PM</td><td>4:00 PM</td><td>QA – Experience from other large account implementation</td><td>Shivani Razdan</td></tr>
+            <tr><td>4:00 PM</td><td>4:15 PM</td><td>Day 2 Wrap up</td><td>Subbu and Kalyani</td></tr>
+          </table>
+        </ion-list>
+        <ion-list *ngSwitchCase="'day3'">
+          <table>
+            <tr><th class="date">From</th><th class="date">To</th><th>Event</th><th>Presenter</th></tr>
+            <tr><td>10:15 AM</td><td>11.00 AM</td><td>IOT Session</td><td>Sandeep Ghosh</td></tr>
+            <tr class="break"><td>11:00 AM</td><td>11:15 AM</td><td>Coffee and Bio break</td><td></td></tr>
+            <tr><td>11:15 AM</td><td>12:00 PM</td><td>Bose ODC floor walk</td><td>Chandra</td></tr>
+            <tr class="break"><td>12:00 PM</td><td>1:00 PM</td><td>Lunch</td><td></td></tr>
+            <tr><td>1:30 PM</td><td>2:30 PM</td><td>Innovation</td><td>Zak and Sanjana</td></tr>
+            <tr class="break"><td>2:30 PM</td><td>3:00 PM</td><td>Coffee and Bio break</td><td></td></tr>
+            <tr><td>3:00 PM</td><td>4:00 PM</td><td>Rewards and Recognition</td><td>Subbu and Kalyani</td></tr>
+            <tr><td>4:00 PM</td><td>4:15 PM</td><td>Day 3 Wrap up and discussion on Sight visit / Shopping</td><td>Subbu and Kalyani</td></tr>
+          </table>
+        </ion-list>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

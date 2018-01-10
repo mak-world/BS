@@ -1,0 +1,33 @@
+.header .toolbar-title-md{
+	text-align: center;
+	font-weight: bold;
+}
+td,tr{
+	border:1px solid black;
+}
+th,.break td{
+	font-size: 13px;
+	background:#e6eefe;
+}
+td,th{
+	color:#434343;
+	height: 35px;
+}
+tr,td{
+	border-color: #c1c1c1;
+}
+td{
+	text-align: center;
+	font-size: 11px;
+}
+.popover-md .popover-content{
+	width:75%;
+	background: transparent;
+	box-shadow: none;
+	top: 50% !important;
+	left:50% !important;
+    transform: translateY(-50%) translateX(-50%) !important;
+}
+.popover-md .popover-content .scroll-content{
+	overflow-y: hidden;
+}

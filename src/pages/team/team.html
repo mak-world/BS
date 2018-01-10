@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Hasbro Team</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list *ngIf="data">
+  <ion-item (click)="openImg('1.jpg')" *ngFor="let i of data">
+    <ion-thumbnail item-start>
+      <img src="assets/imgs/team/{{i.img}}">
+    </ion-thumbnail>
+    <h2>{{i.name}}</h2>
+    <p>{{i.role}}</p>
+    <button class="{{i.team}}" ion-button item-end>{{i.team}}</button>
+  </ion-item>
+</ion-list>
+</ion-content>
